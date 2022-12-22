@@ -266,11 +266,11 @@ then, install Windows VST2, VST3 or CLAP plugins!
 
 ### 13. Check volume levels!
 
-Once everything is set up, don't forget to check that volume levels are set correctly in Pipewire or ALSA. If using a flavour of ALSA be it pure ALSA or pipewire-alsa, run
+Once everything is set up, don't forget to check that volume levels are set correctly. Whether using pipewire-alsa, pipewire-jack, vanilla ALSA or JACK, run
 ```
 alsamixer
 ```
-to check that output is set to 100 (vertical bars) or gain of 0dB (top left of alsamixer). If using a flavour of JACK, be it JACK2 or pipewire-jack, set the volume in your deskop environment's audio volume app on the taskbar as you would for regular desktop apps.
+to check that output is set to 100 (vertical bars) or gain of 0dB (top left of alsamixer). Use F6 to select the correct soundcard. You can also use your desktop environment's volume controls if you have your interface enabled there but note that numbers don't seem to match alsamixer.
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
