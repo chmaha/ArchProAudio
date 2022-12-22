@@ -274,4 +274,6 @@ to check that output is set to 100 (vertical bars) or gain of 0dB (top left of a
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
+See section 5.1.5 of the Pipewire Arch documentation: https://wiki.archlinux.org/title/PipeWire
+
 
