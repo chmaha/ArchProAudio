@@ -278,7 +278,7 @@ See section 5.1.5 of the Pipewire Arch documentation: https://wiki.archlinux.org
 
 ### 14. Other useful tools (all available via the package manager)
 
-**Music Player**: strawberry (can product bit-perfect playback) <br>
+**Music Player**: strawberry (can produce bit-perfect playback) <br>
 **Tagger**: kid3, picard <br>
 **DDP creation/verification/etc**: ddptools <br>
 **Audio Converter**: fre:ac or soundconverter <br>
