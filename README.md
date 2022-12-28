@@ -276,4 +276,13 @@ to check that output is set to 100 (vertical bars) or gain of 0dB (top left of a
 
 See section 5.1.5 of the Pipewire Arch documentation: https://wiki.archlinux.org/title/PipeWire
 
+### 14. Other useful tools (all available via the package manager)
+
+**Music Player**: strawberry (can product bit-perfect playback) <br>
+**Tagger**: kid3, picard <br>
+**DDP creation/verification/etc**: ddptools <br>
+**Audio Converter**: fre:ac or soundconverter <br>
+**CD Ripper**: asunder or cdrdao <br>
+**CD Burner**: cdrdao, k3b or nerolinux4
+
 
