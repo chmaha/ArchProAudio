@@ -194,8 +194,9 @@ change RT priority to 40 on audio device page?
 Also be sure to check out Bitwig Studio, Tracktion Waveform, Qtractor, LMMS, Rosegarden, Zrythm etc...
 https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_workstations_(DAWs)
 
-#### Native plugins (`yay -S [pkgname]`)
+#### Native plugins (`yay -S [pkgname]` where appropriate)
 
+- My JSFX plugin collection (https://forum.cockos.com/showthread.php?t=275301)
 - airwindows-git (http://www.airwindows.com/)  
 - lsp-plugins  (https://lsp-plug.in/)
 - zam-plugins  (http://www.zamaudio.com/?p=976)
