@@ -1,16 +1,16 @@
-# A Pro Audio Tuning Guide for Manjaro (and other Arch-based distros)
+# A Pro Audio Tuning Guide for Arch (and other Arch-based distros)
 
 Following this guide will hopefully allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio.
 
 ## Fundamentals
 
-To get started after installing Manjaro, you could try just steps 3 and 5 below. If you need to use windows plugins on Linux also follow step 11 (easy: wine-staging, more advanced but potentially more performance: wine-tkg). Based on your individual pro audio needs, workflows, hardware specifications and more, your mileage may vary. If you are still having audio performance issues, try following the full guide...
+To get started after installing Arch, you could try just steps 3 and 5 below. If you need to use windows plugins on Linux also follow step 11 (easy: wine-staging, more advanced but potentially more performance: wine-tkg). Based on your individual pro audio needs, workflows, hardware specifications and more, your mileage may vary. If you are still having audio performance issues, try following the full guide...
 
 ### Pipewire?
 
-Manjaro includes an extremely convenient way of switching to Pipewire (see https://pipewire.org/ for more details). You may choose to wait until it ships as default in future releases although it is just as easy to roll things back. To switch to Pipewire run:
+Arch provides an extremely convenient way of switching to Pipewire (see https://pipewire.org/ for more details). You may choose to wait until it ships as default in future releases although it is just as easy to roll things back. To switch to Pipewire run:
 ```shell
-yay -S manjaro-pipewire pipewire-jack
+yay -S pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack
 ```
 Be sure to say 'yes' to removing conflicting packages. Reboot! It would also be wise to install a graph manager like qpwgraph to be able to make connections between apps and devices:
 ```shell
@@ -43,18 +43,18 @@ pw-metadata -n settings 0 clock.force-quantum 0
 
 See https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-PipeWire#setting-buffer-size for more details.
 
-#### Back to ALSA/Pulse?
+#### Back to ALSA/Pulse/JACK ?
 
 In the unlikely event you need to switch back:
 ```shell
-yay -Rdd pipewire-pulse 
-yay -S manjaro-pulse
+yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
+yay -S pulseaudio jack2
 ```
 Again, say 'yes' to removing conflicts (and then reboot).
 
 ## Full In-depth Guide
 
-### 1. Install Manjaro KDE (or other favorite Arch-based distro)
+### 1. Install Arch (or other favorite Arch-based distro)
 
 _Optional:_
 Install `yay`:
@@ -159,7 +159,7 @@ If you run `rtcqs.py` and it gives you a warning about Spectre/Meltdown Mitigati
 ### base-devel (as necessary)
 
 ```shell
-sudo pacman -S --needed base-devel
+yay -S base-devel
 ```
 
 ### 8. Install udev-rtirq
