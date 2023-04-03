@@ -48,9 +48,8 @@ See https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-PipeWire#set
 In the unlikely event you need to switch back:
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
-yay -S pulseaudio jack2
+yay -S pulseaudio pulseaudio-alsa pulseaudio-jack jack2
 ```
-Again, say 'yes' to removing conflicts (and then reboot).
 
 ## Full In-depth Guide
 
