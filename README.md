@@ -12,7 +12,12 @@ Arch provides a relatively easy way of switching your audio to Pipewire (see htt
 ```shell
 yay -S --needed pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 ```
-Be sure to say 'yes' to removing conflicting packages. Reboot! It would also be wise to install a graph manager like qpwgraph to be able to make connections between apps and devices:
+Be sure to say 'yes' to removing conflicting packages. Reboot! Check pipewire is operational via
+```shell
+inxi -Aa
+```
+
+It would also be wise to install a graph manager like qpwgraph to be able to make connections between apps and devices:
 ```shell
 yay -S qpwgraph
 ```
@@ -49,6 +54,10 @@ In the unlikely event you need to switch back:
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
 yay -S pulseaudio pulseaudio-alsa pulseaudio-jack jack2
+```
+Reboot then check whether pulseaudio is operational via
+```shell
+inxi -Aa
 ```
 
 ## Full In-depth Guide
