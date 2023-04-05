@@ -59,6 +59,7 @@ Reboot then check whether pulseaudio is operational via
 ```shell
 inxi -Aa
 ```
+![inxi-pulseaudio](https://user-images.githubusercontent.com/120390802/230185654-1d2453bc-69f8-45cf-8305-0fb335f288dc.png)
 
 ## Full In-depth Guide
 
