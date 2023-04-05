@@ -10,7 +10,7 @@ To get started after installing Arch, you could try just steps 3 and 5 below. If
 
 Arch provides a relatively easy way of switching your audio to Pipewire (see https://pipewire.org/ and https://wiki.archlinux.org/title/PipeWire for more details). You may choose to wait until it ships as default in future releases although it is just as easy to roll things back. To switch to Pipewire run:
 ```shell
-yay -S pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack
+yay -S --needed pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 ```
 Be sure to say 'yes' to removing conflicting packages. Reboot! It would also be wise to install a graph manager like qpwgraph to be able to make connections between apps and devices:
 ```shell
