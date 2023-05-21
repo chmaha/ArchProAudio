@@ -199,7 +199,7 @@ http://reaper.fm/download.php or,
 ```shell
 yay -S reaper
 ```
-change RT priority to 40 on audio device page?  
+change RT priority to 80 on audio device page. While RT priority numbers are all relative, this value matches the sane default used by Ardour and Mixbus.  
 
 Also be sure to check out Bitwig Studio, Tracktion Waveform, Qtractor, LMMS, Rosegarden, Zrythm etc...
 https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_workstations_(DAWs)
