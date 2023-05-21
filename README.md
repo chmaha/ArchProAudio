@@ -1,6 +1,6 @@
 # A Pro Audio Tuning Guide for Arch (and other Arch-based distros)
 
-Following this guide will hopefully allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio. 
+Following this guide will allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio. 
 
 For the archived Ubuntu/Debian-based guide see https://github.com/chmaha/UbuntuProAudio.
 
@@ -23,7 +23,7 @@ It would also be wise to install a graph manager like qpwgraph to be able to mak
 ```shell
 yay -S qpwgraph
 ```
-That should give you everything you need to get up and running. I consider Pipewire ready for primetime at this point. 
+That should give you everything you need to get up and running. I consider Pipewire ready for primetime at this point but for a dissenting view see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1000293#62.
 
 #### Pipewire configuration
 
