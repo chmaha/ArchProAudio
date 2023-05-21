@@ -218,6 +218,10 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 - Bertom Denoiser (https://www.bertomaudio.com/denoiser.html) (not in the Arch repos or AUR)
 - sfizz / sfizz-git (https://sfz.tools/sfizz/)
 - Chowdhury DSP (https://chowdsp.com/products.html) (available via AUR: `yay chow`)
+- Auburn Sounds (https://www.auburnsounds.com/)
+- TAL Software (https://tal-software.com/)
+- Pianoteq (https://www.modartt.com/pianoteq)
+- AudioThing (https://www.audiothing.net/)
 
 ### 11. Wine-staging or Wine-tkg
 
