@@ -217,7 +217,7 @@ https://www.bitwig.com/download/ (flatpak not compatible with yabridge) or,
 yay -S bitwig-studio
 ```
 
-Also be sure to check out Bitwig Studio, Tracktion Waveform, Mixbus, Qtractor, LMMS, Rosegarden, Zrythm etc...
+Also be sure to check out Qtractor, Tracktion Waveform, Mixbus, LMMS, Rosegarden, Zrythm etc...
 https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_workstations_(DAWs)
 
 #### Native plugins (`yay -S [pkgname]` where appropriate)
