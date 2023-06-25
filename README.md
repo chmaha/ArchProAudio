@@ -193,6 +193,8 @@ Enable Jack D-Bus interface:
 
 ### 10. DAW & Plugins
 
+Examples:
+
 REAPER: 
 http://reaper.fm/download.php or,  
 
@@ -201,7 +203,21 @@ yay -S reaper
 ```
 Consider changing the RT priority value to 80 on audio device page. While RT priority numbers are all relative, this value matches the sane default used by Ardour and Mixbus.  
 
-Also be sure to check out Bitwig Studio, Tracktion Waveform, Ardour, Mixbus, Qtractor, LMMS, Rosegarden, Zrythm etc...
+Ardour:
+https://community.ardour.org/download or,
+
+```shell
+yay -S ardour
+```
+
+Bitwig Studio:
+https://www.bitwig.com/download/ (flatpak not compatible with yabridge) or,
+
+```shell
+yay -S bitwig-studio
+```
+
+Also be sure to check out Bitwig Studio, Tracktion Waveform, Mixbus, Qtractor, LMMS, Rosegarden, Zrythm etc...
 https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_workstations_(DAWs)
 
 #### Native plugins (`yay -S [pkgname]` where appropriate)
