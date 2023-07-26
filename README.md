@@ -10,7 +10,7 @@ To get started after installing Arch, you could try just steps 3 and 5 below. If
 
 ### Pipewire?
 
-In short, no, don't do it if you are a pro audio user. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
+In short, no, don't do it if you are a pro audio user. I don't believe it is ready for primetime. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
 
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
