@@ -10,49 +10,8 @@ To get started after installing Arch, you could try just steps 3 and 5 below. If
 
 ### Pipewire?
 
-Arch provides a relatively easy way of switching your audio to Pipewire (see https://pipewire.org/ and https://wiki.archlinux.org/title/PipeWire for more details). You may choose to wait until it ships as default in future releases although it is just as easy to roll things back. To switch to Pipewire run:
-```shell
-yay -S --needed pipewire-pulse pipewire-alsa pipewire-jack wireplumber
-```
-Be sure to say 'yes' to removing conflicting packages. Reboot! Check pipewire is operational via
-```shell
-inxi -Aa
-```
+In short, no, don't do it if you are a pro audio user. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
 
-It would also be wise to install a graph manager like qpwgraph to be able to make connections between apps and devices:
-```shell
-yay -S qpwgraph
-```
-That should give you everything you need to get up and running. I consider Pipewire ready for primetime at this point but for a dissenting view see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1000293#62.
-
-#### Pipewire configuration
-
-If you want to change the default samplerate, buffer size etc, you need to copy `/usr/share/pipewire/pipewire.conf` over to `/etc/pipewire/` and uncomment a few lines:
-
-![2022-04-19_09-19](https://user-images.githubusercontent.com/90937680/163958025-f25a0f05-bc53-4fca-8f7f-28a94308407b.png)
-
-To temporarily change samplerate/buffer size do not use PIPEWIRE_LATENCY environment variable. Instead, use:
-```shell
-pw-metadata -n settings 0 clock.force-rate <samplerate>
-```
-and
-```shell
-pw-metadata -n settings 0 clock.force-quantum <buffer-size>
-```
-To return to default values:
-```shell
-pw-metadata -n settings 0 clock.force-rate 0
-```
-and
-```shell
-pw-metadata -n settings 0 clock.force-quantum 0
-```
-
-See https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-PipeWire#setting-buffer-size for more details.
-
-#### Back to ALSA/Pulse/JACK ?
-
-In the unlikely event you need to switch back:
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
 yay -S pulseaudio pulseaudio-alsa pulseaudio-jack jack2
@@ -181,7 +140,7 @@ sudo make install
 reboot
 ```
 
-### 9. Jack2 + Jack D-Bus (__skip this step if you switched to Pipewire__)
+### 9. Jack2 + Jack D-Bus
 
 ```shell
 yay -S qjackctl jack2-dbus
@@ -297,7 +256,7 @@ then, install Windows VST2, VST3 or CLAP plugins!
 
 ### 13. Check volume levels!
 
-Once everything is set up, don't forget to check that volume levels are set correctly. Whether using pipewire-alsa, pipewire-jack, vanilla ALSA or JACK, run
+Once everything is set up, don't forget to check that volume levels are set correctly. Run
 ```
 alsamixer
 ```
