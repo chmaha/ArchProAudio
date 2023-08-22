@@ -6,7 +6,7 @@ For the Debian-based guide see https://github.com/chmaha/DebianProAudio.
 
 ## Fundamentals
 
-To get started after installing Arch, you could try just steps 3 and 5 below. If you need to use windows plugins on Linux also follow step 11 (easy: wine-staging, more advanced but potentially more performance: wine-tkg). Based on your individual pro audio needs, workflows, hardware specifications and more, your mileage may vary. If you are still having audio performance issues, try following the full guide...
+To get started after installing Arch, you could try just steps 3 and 4 below. If you need to use windows plugins on Linux also follow step 11 (easy: wine-staging, more advanced but potentially more performance: wine-tkg). Based on your individual pro audio needs, workflows, hardware specifications and more, your mileage may vary. If you are still having audio performance issues, try following the full guide...
 
 ### Pipewire?
 
@@ -63,14 +63,14 @@ sudo usermod -a -G realtime,audio $USER
 
 Log out/in or reboot...
 
-### 4. Add "threadirqs" as kernel parameter
+### 4. Kernel tweaks
 
 ```shell
 sudo nano /etc/default/grub
 ```
 
 change 
-`GRUB_CMDLINE_LINUX=""` to `GRUB_CMDLINE_LINUX="threadirqs"`
+`GRUB_CMDLINE_LINUX=""` to `GRUB_CMDLINE_LINUX="threadirqs cpufreq.default_governor=performance"`
 
 ```shell
 sudo update-grub
@@ -80,40 +80,8 @@ or if you don't have update-grub installed
 ```shell
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-### 5. Set governor to "performance"
-
-i. Temporary:
-
-```shell
-sudo cpupower frequency-set -g performance
-```
-
-ii. Permanent:
-
-Add `cpufreq.default_governor=performance` as a kernel parameter:
-
-```shell
-sudo nano /etc/default/grub
-```
-
-Line should now read: 
-
-`GRUB_CMDLINE_LINUX="cpufreq.default_governor=performance threadirqs"`
-
-```shell
-sudo update-grub
-```
-
-or, for kernels < 5.9:
-
-```shell
-sudo nano /etc/default/cpupower # uncomment governor and change to performance
-systemctl enable --now cpupower.service
-systemctl start cpupower.service
-```
     
-### 6. Swappiness
+### 5. Swappiness
 
 ```shell
 sudo nano /etc/sysctl.d/99-sysctl.conf
@@ -121,7 +89,7 @@ sudo nano /etc/sysctl.d/99-sysctl.conf
 
 add "vm.swappiness=10"
     
-### 7. Spectre/Meltdown Mitigations
+### 6. Spectre/Meltdown Mitigations
 
 If you run `rtcqs.py` and it gives you a warning about Spectre/Meltdown Mitigations, you could add `mitigations=off` to GRUB_CMDLINE_LINUX. Warning: disabling these mitigations will make your machine less secure! https://wiki.linuxaudio.org/wiki/system_configuration#disabling_spectre_and_meltdown_mitigations
 
@@ -131,7 +99,7 @@ If you run `rtcqs.py` and it gives you a warning about Spectre/Meltdown Mitigati
 yay -S base-devel
 ```
 
-### 8. Install udev-rtirq
+### 7. Install udev-rtirq
 
 ```shell
 git clone https://github.com/jhernberg/udev-rtirq.git
@@ -140,7 +108,7 @@ sudo make install
 reboot
 ```
 
-### 9. Jack2 + Jack D-Bus
+### 8. Jack2 + Jack D-Bus
 
 ```shell
 yay -S qjackctl jack2-dbus
@@ -158,7 +126,7 @@ To record system audio (say from a browser), 1) make sure JACK is started, 2) st
 ![image](https://github.com/chmaha/DebianProAudio/assets/120390802/dc5b7d0c-153e-4466-8152-4752e2e214fc)
 
 
-### 10. DAW & Plugins
+### 9. DAW & Plugins
 
 Examples:
 
@@ -206,7 +174,7 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 - Pianoteq (https://www.modartt.com/pianoteq)
 - AudioThing (https://www.audiothing.net/)
 
-### 11. Wine-staging or Wine-tkg
+### 10. Wine-staging or Wine-tkg
 
 Perhaps start with vanilla wine-staging and see how you fare in terms of performance. If your workflows rely heavily on VSTi like Kontakt, you may find better performance with wine-tkg (fsync enabled). 
 
@@ -233,7 +201,7 @@ Either download a wine-tkg build from https://github.com/Frogging-Family/wine-tk
 
 If using wine-tkg, set the WINEFSYNC environment variable to 1 according to https://github.com/robbert-vdh/yabridge#environment-configuration (depends on your display manager and login shell)
 
-### 12. Install yabridge
+### 11. Install yabridge
 
 ```shell
 yay -S yabridge yabridgectl
@@ -262,7 +230,7 @@ Configure yabridge according to https://github.com/robbert-vdh/yabridge#readme
 
 then, install Windows VST2, VST3 or CLAP plugins!
 
-### 13. Check volume levels!
+### 12. Check volume levels!
 
 Once everything is set up, don't forget to check that volume levels are set correctly. Run
 ```
@@ -272,7 +240,7 @@ to check that output is set to 100 (vertical bars) or gain of 0dB (top left of a
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
-### 14. Other useful tools (all available via the package manager)
+### 13. Other useful tools (all available via the package manager)
 
 **Music Player**: strawberry (can produce bit-perfect playback)<br>
 ![image](https://user-images.githubusercontent.com/120390802/209884991-d9901e4b-c242-4459-8127-060f2e86b9e1.png) <br>
