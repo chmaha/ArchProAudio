@@ -10,7 +10,19 @@ To get started after installing Arch, you could try just steps 3 and 4 below. If
 
 ### Pipewire?
 
-In short, no, don't do it if you are a pro audio user. I don't believe it is ready for primetime. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
+**December 2023 update:** Now we are up to pipewire v1.0+ I feel more confident about recommending pipewire. Indeed, I'm now running it myself for pro audio work. From a default install it will be part of your regular updates so should be very easy. Here's how to reinstall if you followed the older advice:
+
+```shell
+yay -Rdd pulseaudio pulseaudio-alsa pulseaudio-jack jack2
+yay -S pipewire-alsa pipewire-pulse pipewire-jack
+```
+Reboot then check whether pipewire and associated plugins are operational via
+```shell
+inxi -Aa
+```
+For IRQ-based scheduling benefits when using ALSA, be sure to use the "Pro Audio" profile for your interface via your sound management tool.
+
+**Older advice before the availability of pipewire 1.0+:** In short, no, don't do it if you are a pro audio user. I don't believe it is ready for primetime. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
 
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
