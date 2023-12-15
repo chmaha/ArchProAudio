@@ -22,7 +22,7 @@ inxi -Aa
 ```
 For IRQ-based scheduling benefits when using ALSA, be sure to use the "Pro Audio" profile for your interface via your sound management tool.
 
-**Older advice before the availability of pipewire 1.0+ and for those wanting to stay with Pulse/Jack:** In short, no, don't do it if you are a pro audio user. I don't believe it is ready for primetime. To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio, try:
+**Older advice before the availability of pipewire 1.0+ and for those wanting to stay with Pulse/Jack:** To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio:
 
 ```shell
 yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
