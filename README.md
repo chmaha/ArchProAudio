@@ -111,7 +111,7 @@ If you run `rtcqs.py` and it gives you a warning about Spectre/Meltdown Mitigati
 yay -S base-devel
 ```
 
-### 7. Install udev-rtirq
+### 7. Install udev-rtirq (ignore if using pipewire "pro audio" profile?)
 
 ```shell
 git clone https://github.com/jhernberg/udev-rtirq.git
@@ -120,7 +120,7 @@ sudo make install
 reboot
 ```
 
-### 8. Jack2 + Jack D-Bus
+### 8. Jack2 + Jack D-Bus (ignore if using pipewire)
 
 ```shell
 yay -S qjackctl jack2-dbus
