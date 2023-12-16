@@ -1,6 +1,6 @@
 # A Pro Audio Tuning Guide for Arch (and other Arch-based distros)
 <p align="center">
-  <img src="https://github.com/chmaha/ArchProAudio/assets/120390802/104f4940-fd68-485e-a15c-324ad53b6698">
+  <img src="https://github.com/chmaha/ArchProAudio/assets/120390802/6095a4c2-0603-4c7e-98d7-eb81f3216332">
 </p>
 
 
