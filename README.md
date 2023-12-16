@@ -1,4 +1,8 @@
 # A Pro Audio Tuning Guide for Arch (and other Arch-based distros)
+<p align="center">
+  <img src="https://github.com/chmaha/ArchProAudio/assets/120390802/104f4940-fd68-485e-a15c-324ad53b6698">
+</p>
+
 
 Following this guide will allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio. 
 
