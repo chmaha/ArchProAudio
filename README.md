@@ -96,7 +96,7 @@ or if you don't have update-grub installed
 ```shell
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-For systemd-boot:
+Alternatively, if you are using systemd-boot:
 ```shell
 sudo nano /boot/loader/entries/arch.conf (or whatever the .conf file is called on your system)
 ```
