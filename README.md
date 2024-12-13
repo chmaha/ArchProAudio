@@ -14,7 +14,7 @@ To get started after installing Arch, you could try just steps 3 and 4 below. If
 
 ### Pipewire?
 
-**December 2023 update:** Now we are up to pipewire v1.0+ I feel more confident about recommending pipewire. Indeed, I'm now running it myself for pro audio work. From a default install it will be part of your regular updates so should be very easy. Here's how to reinstall if you followed the older advice:
+**December 2024 update:** Now we are up to pipewire v1.2.7 and I feel very confident recommending pipewire. Indeed, I'm now running it myself for pro audio work. From a default install it will be part of your regular updates so should be very easy. Here's how to reinstall if you followed the older advice:
 
 ```shell
 yay -Rdd pulseaudio pulseaudio-alsa pulseaudio-jack jack2
