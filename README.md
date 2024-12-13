@@ -45,12 +45,6 @@ _Optional:_
 Install `yay`:
 
 ```shell
-sudo pacman -S yay
-```
-
-Or, build from source:
-
-```shell
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
