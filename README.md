@@ -50,6 +50,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+In other Arch-derived distros, `yay` might already be installed or available via `sudo pacman -S yay`.
 
 ### 2. rtcqs (formerly known as realtimeconfigquickscan)
 
