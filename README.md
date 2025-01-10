@@ -6,7 +6,7 @@
 
 Following this guide will allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio. 
 
-_Note: Much of this guide can be adapted for other distros by simply switching out the package manager commands. In terms of kernels, Arch-based distros add the full preempt patch as part of the kernel config at build time whereas for others you might need to add `preempt=full` as a kernel parameter as part of step 4 assuming that `uname -a` returns `PREEMPT_DYNAMIC`. Otherwise, switch to a low-latency kernel. For manually adding realtime privileges in other distros see [jackaudio.org](https://jackaudio.org/faq/linux_rt_config.html)._
+_**Note for users of other distros**: Much of this guide can be adapted for other distros by simply switching out the package manager commands. In terms of kernels, Arch-based distros add the full preempt patch as part of the kernel config at build time whereas for others you might need to add `preempt=full` as a kernel parameter as part of step 4 assuming that `uname -a` returns `PREEMPT_DYNAMIC`. Otherwise, switch to a low-latency kernel. For manually adding realtime privileges in other distros see [jackaudio.org](https://jackaudio.org/faq/linux_rt_config.html)._
 
 ## Fundamentals
 
