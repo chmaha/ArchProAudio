@@ -88,8 +88,6 @@ sudo nano /boot/loader/entries/arch.conf (or whatever the .conf file is called o
 ```
 and add *threadirqs* to the end of the options line.
 
-Note that when testing using Manjaro and kernel 6.12, the previous `cpufreq.default_governor=performance` parameter no longer seems to work.
-
 ### 5. CPU Governor and Sleep/Screeen Lock blocking
 You can use your deskop environment to set CPU governor to "performance" and disable sleep and screen locking. E.g on KDE Plasma:
 
