@@ -6,7 +6,7 @@
 
 Following this guide will allow you to get the best possible performance on Linux for professional audio needs. Even though these steps are well-tested, it is wise to research what each step accomplishes and why (the search engine is your friend :P ). See also https://wiki.archlinux.org/title/Professional_audio. 
 
-For the Debian-based guide see https://github.com/chmaha/DebianProAudio.
+_Note: Much of this guide can be adapted for other distros by simply switching out the package manager commands. In terms of kernels, Arch-based distros add the full preempt patch as part of the kernel config at build time whereas for others you might need to add `preempt=full` as a kernel parameter as part of step 4 assuming that `uname -a` returns `PREEMPT_DYNAMIC`. Otherwise, switch to a low-latency kernel. For manually adding realtime privileges in other distros see [jackaudio.org](https://jackaudio.org/faq/linux_rt_config.html)._
 
 ## Fundamentals
 
@@ -14,7 +14,7 @@ To get started after installing Arch, you could try just steps 3, 4 and 5 below.
 
 ### Pipewire?
 
-**December 2024 update:** Now we are up to pipewire v1.2.7 and I feel very confident recommending pipewire. Indeed, I'm now running it myself for pro audio work. From a default install it will be part of your regular updates so should be very easy. Here's how to reinstall if you followed the older advice:
+**December 2024 update:** Now we are up to pipewire v1.2.7 and I feel very confident recommending pipewire. Indeed, I'm now running it myself for pro audio work. From a default install it will be part of your regular updates so should be very easy. Here's how to install pipewire if you are still running pulseaudio and jack:
 
 ```shell
 yay -Rdd pulseaudio pulseaudio-alsa pulseaudio-jack jack2
@@ -26,17 +26,6 @@ inxi -Aa
 ```
 For IRQ-based scheduling benefits when using ALSA, be sure to use the "Pro Audio" profile for your interface via your sound management tool.
 
-**Older advice before the availability of pipewire 1.0+ and for those wanting to stay with Pulse/Jack:** To get an ALSA + Pulseaudio + JACK system from an install that defaulted to pipewire audio:
-
-```shell
-yay -Rdd pipewire-alsa pipewire-pulse pipewire-jack
-yay -S pulseaudio pulseaudio-alsa pulseaudio-jack jack2
-```
-Reboot then check whether pulseaudio is operational via
-```shell
-inxi -Aa
-```
-![inxi-pulseaudio](https://user-images.githubusercontent.com/120390802/230186674-26064d7e-314b-4bc9-b203-8792c951c458.png)
 ## Full In-depth Guide
 
 ### 1. Install Arch (or other favorite Arch-based distro)
