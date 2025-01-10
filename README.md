@@ -124,25 +124,7 @@ sudo make install
 reboot
 ```
 
-### 9. Jack2 + Jack D-Bus (ignore if using pipewire)
-
-```shell
-yay -S qjackctl jack2-dbus
-```
-
-Enable Jack D-Bus interface:  
-![image](https://github.com/chmaha/DebianProAudio/assets/120390802/ba263c8f-9d4c-4cd6-9e3a-38939d2ed0b5)
-
-Select your audio interface:  
-![image](https://github.com/chmaha/DebianProAudio/assets/120390802/ac98834b-c369-4e82-b372-0fab6abdbabc)
-
-
-To record system audio (say from a browser), 1) make sure JACK is started, 2) start the browser playback, 3) open pavucontrol and select "JACK Sink" as the output under the "playback" tab 4) Connect the relevant cables in qjackctl's graph window being careful to ensure that you are not hearing output twice i.e. delete the cables from the sink direct to the playback and only route to your DAW inputs:
-
-![image](https://github.com/chmaha/DebianProAudio/assets/120390802/dc5b7d0c-153e-4466-8152-4752e2e214fc)
-
-
-### 10. DAW & Plugins
+### 9. DAW & Plugins
 
 For regular work in a DAW, it is recommended to set its audio system to ALSA. If you need to listen to other external sources during a session, in REAPER you can change the ALSA input and output devices to "default" (you need to type this):
 
@@ -196,7 +178,7 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 - Pianoteq (https://www.modartt.com/pianoteq)
 - AudioThing (https://www.audiothing.net/)
 
-### 11. Wine-staging or Wine-tkg
+### 10. Wine-staging or Wine-tkg
 
 Perhaps start with vanilla wine-staging and see how you fare in terms of performance. If your workflows rely heavily on VSTi like Kontakt, you may find better performance with wine-tkg (fsync enabled). 
 
@@ -223,7 +205,7 @@ Follow the instructions to git clone and install latest version: https://github.
 
 If using wine-tkg, set the WINEFSYNC environment variable to 1 according to https://github.com/robbert-vdh/yabridge#environment-configuration (depends on your display manager and login shell)
 
-### 12. Install yabridge
+### 11. Install yabridge
 
 ```shell
 yay -S yabridge yabridgectl
@@ -252,7 +234,7 @@ Configure yabridge according to https://github.com/robbert-vdh/yabridge#readme
 
 then, install Windows VST2, VST3 or CLAP plugins!
 
-### 13. Check volume levels!
+### 12. Check volume levels!
 
 Once everything is set up, don't forget to check that volume levels are set correctly. Run
 ```
@@ -262,7 +244,7 @@ to check that output is set to 100 (vertical bars) or gain of 0dB (top left of a
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
-### 14. Other useful tools (all available via the package manager)
+### 13. Other useful tools (all available via the package manager)
 
 **Music Player**: strawberry (can produce bit-perfect playback)<br>
 ![image](https://user-images.githubusercontent.com/120390802/209884991-d9901e4b-c242-4459-8127-060f2e86b9e1.png) <br>
