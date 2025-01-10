@@ -153,7 +153,13 @@ To record system audio (say from a browser), 1) make sure JACK is started, 2) st
 
 ### 10. DAW & Plugins
 
-Examples:
+For regular work in a DAW, it is recommended to set its audio system to ALSA. If you need to listen to other external sources during a session, in REAPER you can change the ALSA input and output devices to "default" (you need to type this):
+
+![image](https://github.com/user-attachments/assets/956b4857-741e-4b5f-aba5-b5288e98bb37)
+
+Set your desired audio device using your desktop environment.
+
+DAW Install Examples:
 
 REAPER: 
 http://reaper.fm/download.php or,  
