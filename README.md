@@ -168,9 +168,10 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 #### Native plugins (`yay -S [pkgname]` where appropriate)
 
 - My JSFX plugin collection (https://forum.cockos.com/showthread.php?t=275301)
-- airwindows-git (http://www.airwindows.com/)  
-- lsp-plugins  (https://lsp-plug.in/)
-- zam-plugins  (http://www.zamaudio.com/?p=976)
+- airwindows-git (http://www.airwindows.com/)
+- x42-plugins (http://x42-plugins.com/x42/)  
+- lsp-plugins (https://lsp-plug.in/)
+- zam-plugins (http://www.zamaudio.com/?p=976)
 - distrho-ports (https://distrho.sourceforge.io/ports.php)
 - dpf-plugins (https://distrho.sourceforge.io/plugins.php)
 - elephantdsp-roomreverb (https://www.elephantdsp.com/)
@@ -185,6 +186,8 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 - AudioThing (https://www.audiothing.net/)
 
 ### 10. Wine-staging or Wine-tkg
+
+**Gentle Warning**: Recent WINE development has made running Windows plugins on Linux problematic. In order to things to work as expected, stick with wine-staging or wine-tkg v9.21. A better approach would be to move entirely to Linux-native plugins. Unless you live by AI-powered mixing plugins, the only area that is lacking on Linux is spectral editing tools equivalent to iZotope RX or Acon Digital Acoustica.
 
 Perhaps start with vanilla wine-staging and see how you fare in terms of performance. If your workflows rely heavily on VSTi like Kontakt, you may find better performance with wine-tkg (fsync enabled). 
 
