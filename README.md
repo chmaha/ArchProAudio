@@ -16,7 +16,7 @@ However, for Debian, Ubuntu or Arch, the low-latency [Liquorix kernel](https://l
 curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
 ```
 
-With all other tweaks set identically, the Liquorix kernel performs noticeably better than the Debian kernel on my system. With Liquorix, there is no need to set `preempt=full` but the `threadirqs` parameter is desirable.
+With all other tweaks set identically, the Liquorix kernel performs noticeably better than the Debian kernel on my system. With Liquorix, there is no need to set `preempt=full` but the `threadirqs` parameter is still of great benefit.
 
 ## Fundamentals
 
