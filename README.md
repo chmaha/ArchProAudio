@@ -10,6 +10,14 @@ _**Note for users of other distros**: Much of this guide can be adapted for othe
 
 > If the `uname -a` output contains `PREEMPT_DYNAMIC`, then run either `zgrep PREEMPT /proc/config.gz` or `grep PREEMPT "/boot/config-$(uname -r)"` depending on your distro. If `CONFIG_PREEMPT` is not set, then either add the `preempt=full` kernel parameter or better yet, switch to a kernel that's optimized for low latencies.
 
+However, for Debian, Ubuntu or Arch, the low-latency [Liquorix kernel](https://liquorix.net/) might be an even better option and is what I use myself. Install via:
+
+```shell
+curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
+```
+
+With all other tweaks set identically, the Liquorix kernel performs noticeably better than the Debian kernel on my system. With Liquorix, there is no need to set `preempt=full` but the `threadirqs` parameter is desirable.
+
 ## Fundamentals
 
 To get started after installing Arch, you could try just steps 3, 4 and 5 below. If you need to use windows plugins on Linux also follow step 11 (easy: wine-staging, more advanced but potentially more performance: wine-tkg). Based on your individual pro audio needs, workflows, hardware specifications and more, your mileage may vary. If you are still having audio performance issues, try following the full guide...
