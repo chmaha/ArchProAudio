@@ -187,7 +187,7 @@ https://en.wikipedia.org/wiki/List_of_Linux_audio_software#Digital_audio_worksta
 
 ### 10. Wine-staging or Wine-tkg
 
-**Gentle Warning**: Recent WINE development has made running Windows plugins on Linux problematic. In order to things to work as expected, stick with wine-staging or wine-tkg v9.21. A better approach would be to move entirely to Linux-native plugins. Unless you live by AI-powered mixing plugins, the only area that is lacking on Linux is spectral editing tools equivalent to iZotope RX or Acon Digital Acoustica.
+**Gentle Warning**: Recent WINE development has made running Windows plugins on Linux problematic. In order to things to work as expected, stick with wine-staging or wine-tkg v9.21. A better approach would be to move entirely to Linux-native plugins. Unless you live by AI-powered mixing plugins, the only area that is lacking on Linux is spectral editing (missing equivalents to iZotope RX and Acon Digital Acoustica).
 
 Perhaps start with vanilla wine-staging and see how you fare in terms of performance. If your workflows rely heavily on VSTi like Kontakt, you may find better performance with wine-tkg (fsync enabled). 
 
