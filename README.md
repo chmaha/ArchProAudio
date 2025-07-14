@@ -203,7 +203,11 @@ Or, install a particular version that you know is compatible:
 yay -S downgrade
 sudo DOWNGRADE_FROM_ALA=1 downgrade wine-staging
 ```
+followed by adding an IgnorePkg line to /etc/pacman.conf:
 
+```shell
+IgnorePkg   = wine-staging
+```
 Check https://github.com/robbert-vdh/yabridge#tested-with for up-to-date info.
 
 OR...for the more adventurous:
