@@ -206,7 +206,7 @@ sudo DOWNGRADE_FROM_ALA=1 downgrade wine-staging
 followed by adding an IgnorePkg line to /etc/pacman.conf:
 
 ```shell
-IgnorePkg   = wine-staging
+IgnorePkg = wine-staging
 ```
 Check https://github.com/robbert-vdh/yabridge#tested-with for up-to-date info.
 
