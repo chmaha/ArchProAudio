@@ -10,7 +10,7 @@ _**Note for users of other distros**: Much of this guide can be adapted for othe
 
 > If the `uname -a` output contains `PREEMPT_DYNAMIC`, then run either `zgrep PREEMPT /proc/config.gz` or `grep PREEMPT "/boot/config-$(uname -r)"` depending on your distro. If `CONFIG_PREEMPT` is not set, then either add the `preempt=full` kernel parameter or better yet, switch to a kernel that's optimized for low latencies.
 
-However, for Debian, Ubuntu or Arch, the low-latency [Liquorix kernel](https://liquorix.net/) might be an even better option and is what I use myself. Install via:
+However, for Debian, Ubuntu or Arch, the low-latency [Liquorix kernel](https://liquorix.net/) might be an even better option. Install via:
 
 ```shell
 curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
@@ -94,7 +94,16 @@ Alternatively, if you are using systemd-boot:
 ```shell
 sudo nano /boot/loader/entries/arch.conf (or whatever the .conf file is called on your system)
 ```
-and add *threadirqs* to the end of the options line.
+add *threadirqs* to the end of the options line, save and reboot.
+
+On EndeavourOS and other setups using a unified kernel image:
+```shell
+sudo nano /etc/kernel/cmdline
+```
+and add *threadirqs* to the end of the options line, then run
+```shell
+sudo reinstall-kernels
+```
 
 ### 5. CPU Governor and Sleep/Screeen Lock blocking
 You can use your deskop environment to set CPU governor to "performance" and disable sleep and screen locking. E.g on KDE Plasma:
