@@ -326,7 +326,7 @@ Check that output is set to 100 (vertical bars) or a gain of 0 dB (shown in the 
 An xrun (overrun or underrun) occurs when the audio buffer is not filled in time, resulting in a click, pop, or dropout. To check whether you are experiencing xruns:
 
 - **REAPER**: View > performance meter
-- **Ardour/Mixbus**: The "Xrun" counter is displayed in the transport bar
+- **Ardour/Mixbus**: The "Xrun" counter is displayed in the top right of the window
 - **pipewire**: Run `pw-top` in a terminal during a session to monitor real-time DSP load and missed deadlines
 - **JACK (if used)**: `jack_iodelay` and `qjackctl`'s message window will report xruns
 
