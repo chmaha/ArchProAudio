@@ -321,12 +321,14 @@ Check that output is set to 100 (vertical bars) or a gain of 0 dB (shown in the 
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
+**TIP: If you are finding that the volume of your interface is being reset to 40% on startup (Behringer UMC Series seems susceptible), switch to the "pro audio" profile in pavucontrol._**
+
 ### 13. Diagnosing audio dropouts (xruns)
 
 An xrun (overrun or underrun) occurs when the audio buffer is not filled in time, resulting in a click, pop, or dropout. To check whether you are experiencing xruns:
 
 - **REAPER**: View > performance meter
-- **Ardour/Mixbus**: The "Xrun" counter is displayed in the top right of the window
+- **Ardour/Mixbus**: The xrun counter is displayed in the top right of the window
 - **pipewire**: Run `pw-top` in a terminal during a session to monitor real-time DSP load and missed deadlines
 - **JACK (if used)**: `jack_iodelay` and `qjackctl`'s message window will report xruns
 
