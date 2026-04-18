@@ -321,7 +321,7 @@ Check that output is set to 100 (vertical bars) or a gain of 0 dB (shown in the 
 
 ![alsamixer](https://user-images.githubusercontent.com/120390802/209148828-f5654838-eb25-4dd2-9955-4e0e8db99be2.png)
 
-**TIP: If you are finding that the volume of your interface is being reset to 40% on startup (Behringer UMC Series seems susceptible), switch to the "pro audio" profile in pavucontrol._**
+**TIP: If you are finding that the volume of your interface is being reset to 40% on startup (Behringer UMC Series seems susceptible), switch to the "pro audio" profile in pavucontrol.**
 
 ### 13. Diagnosing audio dropouts (xruns)
 
